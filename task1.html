@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task1.css">
+    <script src="task1.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <title>BSEF19M003 Ludo</title>
+</head>
+<body>
+
+
+    <div class="main-div"><!--containing the whole game including menu screen and game screen-->
+       
+
+        <div class="menu-screen"><!--div/screen on which the menu of game will be shown-->
+            <div class="menu-card"><!--div on which the menu card is displayed-->
+                <div class="game-logo"><!--contains the image-->
+                    <img src="logo.png" class="logo" style="height: 180px; width: 190px;">
+                </div>
+
+                <div class="players-name-inputs">
+                    <input type="text" class="rpn" placeholder="Red Player's Name...">
+                    <input type="text" class="gpn" placeholder="Green Player's Name...">
+                    <input type="text" class="ypn" placeholder="Yellow Player's Name...">
+                    <input type="text" class="bpn" placeholder="Blue Player's Name...">
+                    <button class="play-btn" onclick="Play()">Play Now</button>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-screen">
+
+
+            <div class="player-rolldice-area">
+                <div class="player-residence">
+                    <span class="pname">Player 1</span>
+                    <div class="rp-dice" onclick="rollDice(this,0)">0</div>
+                </div>
+                <div class="player-residence">
+                    <span class="pname">Player 4</span>
+                    <div class="bp-dice" onclick="rollDice(this,3)">0</div>
+                </div>
+            </div>
+            
+
+            <div class="game-board">
+
+                <!-- red block -->
+                <div class="red-block">
+                    <div class="tokens-home">
+                        <div class="token-div" style="background-color:rgb(252, 66, 66)"><div onclick="moveRedToken(this,0)" class="red-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:rgb(252, 66, 66)"><div onclick="moveRedToken(this,1)" class="red-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:rgb(252, 66, 66)"><div onclick="moveRedToken(this,2)" class="red-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:rgb(252, 66, 66)"><div onclick="moveRedToken(this,3)" class="red-token material-icons">hourglass_full</div></div>
+                    </div>
+                </div>
+
+                <!-- boxes in first line between red and green block -->
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+
+                <!-- green block -->
+                <div class="green-block">
+                    <div class="tokens-home">
+                        <div class="token-div" style="background-color:rgb(51, 223, 51)"><div onclick="moveGreenToken(this,0)" class="green-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:rgb(51, 223, 51)"><div onclick="moveGreenToken(this,1)" class="green-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:rgb(51, 223, 51)"><div onclick="moveGreenToken(this,2)" class="green-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:rgb(51, 223, 51)"><div onclick="moveGreenToken(this,3)" class="green-token material-icons">hourglass_full</div></div>
+                    </div>
+                </div>
+
+                
+                <div class="jump box"></div>
+                <div class="jump gsafe-box"></div>
+                <div class="jump gstop-box"></div>
+                <div class="jump box rstop-box"></div>
+                <div class="jump gsafe-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump gsafe-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump gsafe-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump gsafe-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump rstop-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="central-winning-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box gstop-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump rsafe-box"></div>
+                <div class="jump rsafe-box"></div>
+                <div class="jump rsafe-box"></div>
+                <div class="jump rsafe-box"></div>
+                <div class="jump rsafe-box"></div>
+                <div class="jump ysafe-box"></div>
+                <div class="jump ysafe-box"></div>
+                <div class="jump ysafe-box"></div>
+                <div class="jump ysafe-box"></div>
+                <div class="jump ysafe-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box bstop-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump ystop-box"></div>
+                <div class="jump box"></div>
+
+
+
+                 <!-- blue block -->
+                 <div class="blue-block">
+                    <div class="tokens-home">
+                        <div class="token-div" style="background-color:rgb(20, 140, 180);"><div onclick="moveBlueToken(this,0)" class="blue-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:rgb(20, 140, 180);"><div onclick="moveBlueToken(this,1)" class="blue-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:rgb(20, 140, 180);"><div onclick="moveBlueToken(this,2)" class="blue-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:rgb(20, 140, 180);"><div onclick="moveBlueToken(this,3)" class="blue-token material-icons">hourglass_full</div></div>
+                    </div>
+                </div>
+
+
+                <!-- boxes in first line between blue and yellow block -->
+                <div class="jump box"></div>
+                <div class="jump bsafe-box"></div>
+                <div class="jump box"></div>
+
+
+                <!-- yellow block -->
+                <div class="yellow-block">
+                    <div class="tokens-home">
+                        <div class="token-div" style="background-color:yellow;"><div onclick="moveYellowToken(this,0)" class="yellow-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:yellow;"><div onclick="moveYellowToken(this,1)" class="yellow-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:yellow;"><div onclick="moveYellowToken(this,2)" class="yellow-token material-icons">hourglass_full</div></div>
+                        <div class="token-div" style="background-color:yellow;"><div onclick="moveYellowToken(this,3)" class="yellow-token material-icons">hourglass_full</div></div>
+                    </div>
+                </div>
+
+
+                <div class="jump box"></div>
+                <div class="jump bsafe-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump bsafe-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump bsafe-box"></div>
+                <div class="jump box ystop-box"></div>
+                <div class="jump bstop-box"></div>
+                <div class="jump bsafe-box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+                <div class="jump box"></div>
+            </div>
+
+
+
+
+            <div class="player-rolldice-area">
+                <div class="player-residence">
+                    <span class="pname">Player 2</span>
+                    <div class="gp-dice" onclick="rollDice(this,1)">0</div>
+                </div>
+                <div class="player-residence">
+                    <span class="pname">Player 3</span>
+                    <div class="yp-dice" onclick="rollDice(this,2)">0</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

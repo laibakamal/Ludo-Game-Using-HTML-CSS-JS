@@ -1,0 +1,539 @@
+body
+{
+    background-size: 56.57px 56.57px;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 255);
+}
+
+.main-div
+{
+    background-image: url('bg.jpg');
+   height: 100vh;
+   width: 100vw;
+}
+
+.menu-screen
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: +99;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.menu-card
+{
+    border-radius: 10px;
+    border: 20px solid rgb(243, 105, 105);
+    background-color: rgb(219, 194, 194);
+    text-align: center;
+    width: 400px;
+    height: 60vh;
+    padding-top: 20px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.7),inset 0px 0px 10px rgba(0,0,0,0.4);
+}
+
+.game-logo img
+{
+    width: 20%;
+}
+
+.players-name-inputs
+{
+    border-bottom: 0.5px solid black;
+    padding-bottom: 12px;
+}
+
+.players-name-inputs input
+{
+    width: 80%;
+    margin: 10px 0px;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input::placeholder
+{
+    color: black;
+}
+
+.rpn
+{
+    border: 0.5px solid rgb(255, 0, 0);
+    background-color: rgb(253, 253, 253);
+    box-shadow:0px 0px 4px red,inset 0px 0px 10px red;
+}
+
+.gpn
+{
+    border: 0.5px solid green;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px green,inset 0px 0px 10px green;
+}
+
+.bpn
+{
+    border: 0.5px solid blue;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px blue,inset 0px 0px 10px blue;
+}
+
+.ypn
+{
+    border: 0.5px solid rgb(216, 216, 73);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px yellow,inset 0px 0px 10px yellow;
+}
+
+.play-btn
+{
+    border: 00.5px solid black;
+    border-radius: 5px;
+    background-color: rgb(191, 146, 97);
+    font-size: 18px;
+    padding: 5px 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.play-btn:hover
+{
+    background-color: grey;
+}
+
+.game-screen
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+.player-rolldice-area
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 5px;
+    height: 600px;
+    width: 200px;
+}
+
+.player-residence
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pname
+{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.rp-dice
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    font-size: 30px;
+    color: white;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0px 0px 1px black;
+    box-shadow: inset 0px 0px 8px black;
+    box-sizing: border-box;
+}
+
+.gp-dice
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    font-size: 30px;
+    color: white;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0px 0px 1px black;
+    box-shadow: inset 0px 0px 8px black;
+    box-sizing: border-box;
+}
+
+.bp-dice
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    font-size: 30px;
+    color: white;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0px 0px 1px black;
+    box-shadow: inset 0px 0px 8px black;
+    box-sizing: border-box;
+}
+
+.yp-dice
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    font-size: 30px;
+    color: white;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0px 0px 1px black;
+    box-shadow: inset 0px 0px 8px black;
+    box-sizing: border-box;
+}
+
+.game-board
+{
+    display: grid;
+    grid-template-columns:  40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    width:600px;
+    height:600px;
+    background-color: white;
+    border: 20px solid rgb(124, 122, 8);
+    box-shadow: inset 0px 0px 8px black;
+    border-radius: 5px;
+}
+
+.red-block
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1/ span 6;
+    grid-column: 1/span 6;
+    background-color: red;
+    border: 0.5px solid rgb(12, 1, 1);
+    box-shadow: inset 0px 0px 8px black;
+}
+
+.tokens-home
+{
+    display: grid;
+    grid-template-columns: 80px 80px;
+    grid-gap: 10px;
+    background-color:white;
+    height: 150px; 
+    overflow: hidden;
+    padding-top: 15px;
+    padding-left: 25px;
+    border: 1px solid black;
+    box-shadow: inset 0px 0px 8px black;
+}
+
+.token-div 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    opacity: 0.9;
+    border-radius: 10%;
+    z-index: 50;
+    box-shadow: 0px 0px 4px rgb(124, 124, 129),inset 0px 0px 10px rgb(118, 118, 128);
+}
+
+.red-token
+{
+    color: maroon;
+}
+
+.green-token
+{
+    color: darkgreen;
+}
+
+.blue-token
+{
+    color: darkblue;
+}
+
+.yellow-token
+{
+    color: goldenrod;
+}
+
+@font-face 
+{
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v120/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+  
+  .material-icons 
+  {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+  }
+
+.jump
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.jump span:nth-child(1)
+{
+    top:0px;
+}
+.jump span:nth-child(2)
+{
+    top:4px;
+}
+.jump span:nth-child(3)
+{
+    top:8px;
+}
+.jump span:nth-child(4)
+{
+    top:12px;
+}
+.jump span:nth-child(5)
+{
+    top:16px;
+}
+.jump span:nth-child(6)
+{
+    top:20px;
+}
+.jump span:only-child
+{
+    top:auto;
+}
+
+.box
+{
+    border: 0.5px solid black;
+}
+
+.green-block
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1/ span 6;
+    grid-column: 10/span 6;
+    background-color: green;
+    border: 0.5px solid rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 8px black;
+}
+
+.rsafe-box
+{
+    background-color: red;
+    border: 0.5px solid black;
+}
+
+.gsafe-box
+{
+    background-color: green;
+    border: 0.5px solid black;
+}
+
+.bsafe-box
+{
+    background-color: blue;
+    border: 0.5px solid black;
+}
+
+.ysafe-box
+{
+    background-color: yellow;
+    border: 0.5px solid black;
+}
+
+.rstop-box
+{
+    background-image: linear-gradient(45deg, rgb(253, 84, 84), pink, pink, rgb(255, 132, 132), #ff8080, pink, pink);
+    background-size: 15px 10px;
+}
+
+.gstop-box
+{
+    background-image: linear-gradient(45deg, rgb(33, 168, 33), lightgreen, lightgreen,rgb(30, 174, 30), rgb(49, 187, 49), lightgreen,lightgreen);
+    background-size: 15px 10px;
+}
+
+.bstop-box
+{
+    background-image: linear-gradient(45deg, rgb(73, 73, 248),skyblue, skyblue, rgb(65, 65, 242), rgb(85, 85, 253), skyblue, skyblue);
+    background-size: 15px 10px;
+}
+
+.ystop-box
+{
+    background-image: linear-gradient(45deg, rgb(232, 182, 56),yellow,yellow,rgb(255, 200, 62),rgb(255, 214, 111),yellow,yellow);
+    background-size: 15px 10px;
+}
+
+.central-winning-box
+{
+    border-top: 60px solid green;
+    border-left: 60px solid red;
+    border-right: 60px solid yellow;
+    border-bottom: 60px solid blue;
+    height: 0px;
+    width: 0px;
+    grid-column: 7/ span 3;
+    grid-row: 7/span 3;
+}
+
+.blue-block
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 10/ span 6;
+    grid-column: 1/span 6;
+    background-color: blue;
+    border: 0.5px solid rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 8px black;
+}
+
+
+.yellow-block
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 10/ span 6;
+    grid-column: 10/span 6;
+    background-color: yellow;
+    border: 0.5px solid rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 8px black;
+}
+
+
+@media only screen and (max-width: 600px)
+{
+    .main-div
+    {
+        position: fixed;
+    }
+
+    .game-screen
+    {
+        flex-direction: column;
+    }
+
+    .player-rolldice-area
+    {
+        display: none;
+    }
+
+    .game-board
+    {
+        display: grid;
+        grid-template-columns: repeat (15,1fr);
+        grid-template-rows: repeat (15,1fr );
+        height: 100vw;
+        width: 100vw;
+        background-color: white;
+        border: 0.5px solid black;
+    }
+    
+    .tokens-home
+    {
+        display: grid;
+        grid-template-columns: repeat (2,1fr);
+        grid-gap: 16px;
+        background-color: lightpink;
+    }
+
+    .central-winning-box
+    {
+        grid-column: 7/ span 3;
+        grid-row: 7/span 3;
+        background-size: cover;
+        background-image: url(gameboeard-center);
+        border: 0.5px solid red;
+        height: 100%;
+        width: 100%;
+    }
+
+    .token-div
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1fr;
+        width: 1fr;
+        background-color: white;
+        opacity: 0.9;
+        border-radius: 50%;
+    }
+
+    .winImg
+    {
+        grid-column: 1/3;
+        width:90%;
+        align-self: center;
+        align-items: center;
+        
+    }
+
+}
+
+
+
+.winImg
+{
+    grid-column: 1/3;
+    width:90%;
+    align-self: center;
+    align-items: center;
+}
+
+
+
+.winner-r
+{
+    width:100%;
+    height: 100px;
+    background-image: url(winImg.png);
+}
